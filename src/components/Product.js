@@ -7,7 +7,8 @@ function Product(props){
             <span>{props.name}  </span>
             <span>{props.brand}  </span>
             <span>{props.price}  </span>
-            {props.colors.map(color => (<span>  {color}  </span>))}
+            <span>{props.colors}  </span>
+           
         </div>
     )
 }
