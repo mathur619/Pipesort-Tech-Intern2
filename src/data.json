@@ -1,0 +1,60 @@
+[{
+    "name":  "one",
+    "brand": "nike",
+    "colors": ["black","grey"],
+    "price": "5000"
+},
+{
+    "name":  "two",
+    "brand": "nike",
+    "colors": ["black","blue"],
+    "price": "5000"
+},
+{
+    "name":  "three",
+    "brand": "adidas",
+    "colors": ["blue","grey"],
+    "price": "5000"
+},
+{
+    "name":  "four",
+    "brand": "adidas",
+    "colors": ["black"],
+    "price": "5000"
+},
+{
+    "name":  "five",
+    "brand": "adidas",
+    "colors": ["black","grey","blue"],
+    "price": "5000"
+},
+{
+    "name":  "six",
+    "brand": "nike",
+    "colors": ["black","grey"],
+    "price": "5000"
+},
+{
+    "name":  "one",
+    "brand": "puma",
+    "colors": ["grey"],
+    "price": "5000"
+},
+{
+    "name":  "one",
+    "brand": "puma",
+    "colors": ["grey","red"],
+    "price": "5000"
+},
+{
+    "name":  "seven",
+    "brand": "puma",
+    "colors": ["grey","black"],
+    "price": "5000"
+},
+{
+    "name":  "one",
+    "brand": "puma",
+    "colors": ["grey","vlue"],
+    "price": "5000"
+}]
