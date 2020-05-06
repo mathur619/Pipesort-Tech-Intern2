@@ -10,7 +10,7 @@ function Product(props){
             <span className="colors">
                <span>Colors: </span>
                <span className="colors__names">
-                   {props.colors.map(color => <div>{color}</div>)}
+                   {props.colors.map(color => <div key={color}>{color}</div>)}
                </span>  
             </span>
            

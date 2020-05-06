@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useRef} from 'react'
 import Product from './Product'
 import data from '../data.json'
+import close from '../close.svg'
 
 function App(){
     const [colors,setColors]= useState('')
     const [price,setPrice]= useState({from:0,to:10000})
     const [brands,setBrands]= useState('')
-    let products
+    const filterDiv= useRef(null)
+    let products,display=false
 
     function showData(){
         const filteredData= data.filter(
@@ -63,12 +65,24 @@ function App(){
         setPrice(prevPrice => ({...prevPrice,[name]:value}))
 
     }
+    function toggleFilterDisplay(){
+        if(display==false){
+            filterDiv.current.style.display="block"
+            display=true
+        }
+        else
+        {
+            filterDiv.current.style.display="none"
+            display=false
+        }
+
+    }
 
     return(
         <div>
             <div className="navbar">
                 <div className="pipesort">Pipesort Technology</div>
-                <div className="filtersLink">Filters</div>
+                <div className="filtersLink" onClick={toggleFilterDisplay}>Filters</div>
             </div>
 
         <div className="container">
@@ -77,9 +91,11 @@ function App(){
                 {products}
             </div>
 
-            <div className="filters">
-                {/* <h2>Filters</h2> */}
-                <h3>Brands:</h3>
+            <div className="filters" ref={filterDiv}>
+                <div>
+                    <h3>Brands:</h3>
+                    <img src={close} onClick={toggleFilterDisplay}/>
+                </div>
                 <ul>
                     <li> <input type="checkbox" value="nike"  id="nike" onClick={brandCheck} />         <label htmlFor="nike">Nike</label> </li>
                     <li> <input type="checkbox" value="adidas" id="adidas" onClick={brandCheck} />     <label htmlFor="adidas">Adidas</label> </li>
