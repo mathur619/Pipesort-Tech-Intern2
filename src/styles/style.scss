@@ -1,0 +1,84 @@
+@import "color";
+@import "reset";
+ 
+.filters{
+    display: none;
+    // position: absolute;
+    // width: 90%;
+}
+
+
+.navbar{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    align-items: center;
+    height: 6vh;
+    text-align: center;
+    background-color: #FF1259;
+    
+    .pipesort{
+        width: 100%;
+        color: white;
+    }
+    .filtersLink{
+        background:#fff;
+        width: 30%;
+        padding: 0.3rem;
+    }
+}
+.container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+.products{
+    padding: 0.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,155px));
+    grid-template-rows: repeat(4,1fr);
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.product{
+    border:0.1px solid #383838;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,1fr);
+    align-items: center;
+    height: 160px;
+    
+    // width: 140px;
+
+    grid-template-areas:  
+                          "."
+                          "name" 
+                          "brand"
+                          "price"
+                          "colors"
+                          ".";
+    span{
+        width: 80%;
+        justify-self: center;
+    }
+    .colors{
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 1fr;
+        span{
+            justify-self: left;
+        }
+        &__names{
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+ 
+}
+@import "mediaQuery";

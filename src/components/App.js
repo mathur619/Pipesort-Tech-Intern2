@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import Product from './Product'
 import data from '../data.json'
-// import data2 from '../data2.json'
 
 function App(){
     const [colors,setColors]= useState('')
@@ -67,8 +66,19 @@ function App(){
 
     return(
         <div>
-            <div>
-                <h2>Filters</h2>
+            <div className="navbar">
+                <div className="pipesort">Pipesort Technology</div>
+                <div className="filtersLink">Filters</div>
+            </div>
+
+        <div className="container">
+
+            <div className="products">
+                {products}
+            </div>
+
+            <div className="filters">
+                {/* <h2>Filters</h2> */}
                 <h3>Brands:</h3>
                 <ul>
                     <li> <input type="checkbox" value="nike"  id="nike" onClick={brandCheck} />         <label htmlFor="nike">Nike</label> </li>
@@ -87,12 +97,8 @@ function App(){
                 <input type="text" value={price.to} name="to" id="to" onChange={handleChange} />
                 <br />
             </div>
-            <div> {brands} </div>
-            <div> {colors} </div>
-            <div> {price.from} to {price.to} </div>
-            <div>
-                {products}
-            </div>
+        </div>
+    
         </div>
     )
 }
