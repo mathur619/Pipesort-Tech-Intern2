@@ -25,7 +25,8 @@ function App(){
             <Product name={item.name}
                      price={item.price}
                      brand={item.brand}
-                     colors={item.colors} />
+                     colors={item.colors}
+                     key={item.name} />
         ))
     }
 

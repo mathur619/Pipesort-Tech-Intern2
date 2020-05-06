@@ -35,25 +35,25 @@
     "price": 2000
 },
 {
-    "name":  "one",
+    "name":  "seven",
     "brand": "puma",
     "colors": ["grey"],
     "price": 1000
 },
 {
-    "name":  "one",
+    "name":  "eight",
     "brand": "puma",
     "colors": ["grey","red"],
     "price": 4500
 },
 {
-    "name":  "seven",
+    "name":  "nine",
     "brand": "puma",
     "colors": ["grey","black"],
     "price": 5500
 },
 {
-    "name":  "one",
+    "name":  "ten",
     "brand": "puma",
     "colors": ["grey","blue"],
     "price": 6500
