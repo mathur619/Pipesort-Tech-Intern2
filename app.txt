@@ -11,15 +11,13 @@ function App(){
 
     function showData(){
         const filteredData= data.filter(
-            product =>  {
-                let b=brands.length>0?brands.match(product.brand):true  
-                let p=price.from <= product.price && price.to >= product.price 
-                let c=colors.length>0?product.colors.filter(color => colors.match(color)).length :true
-                return b && p && c
-                }
-            )
-            console.log(filteredData)
-            
+            product => 
+                brands.match(product.brand) && 
+                price.from <= product.price && price.to >= product.price &&
+               product.colors.filter(color => colors.match(color)).length > 0
+                
+                )
+        console.log(filteredData)
         
         products= filteredData.map(item => (
             <Product name={item.name}
